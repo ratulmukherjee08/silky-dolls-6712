@@ -4,9 +4,132 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <!-- ===========Navbar============= -->
+    <div class="head">
+        <div class="navbar-cont">
+           <img src="img2.png" alt="">
+           <div class="country-select" id="location">
+            <div class="select">
+                <p id="text">
+                    Search city,area or loc.... 
+                </p>
+                <i class="fa-solid fa-angle-down" id="arrow"></i>
+
+            </div>
+            <ul class="option" id="list">
+                <li class="option1" onclick="myFunction('Delhi')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Delhi</p>
+                </li>
+                <li class="option1" onclick="myFunction('Kerala')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Kerala</p>
+                </li>
+                <li class="option1" onclick="myFunction('Punjab')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Punjab</p>
+                </li>
+                <li class="option1" onclick="myFunction('Kolkata')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Kolkata</p>
+                </li>
+
+            </ul>
+           </div>
+
+           <div class="search-box">
+            <input type="text" class="search" placeholder="Find Cars,Mobile Phones and More.... " id="searchid">
+            <p><i class="fa-solid fa-magnifying-glass"></i></p>
+           </div>
+
+           <div class="language">
+            <p id="eng">ENGLISH</p>
+            <p><i class="fa-solid fa-angle-down" id="arrow2"></i></p>
+
+            <ul class="change">
+                <li onclick="changeLang()">English</li>
+                <li onclick="changeLang()">हिन्दी</li>
+            </ul>
+
+           </div>
+           <div class="msg">
+            <p><i class="fa-regular fa-comment"></i></p>
+           </div>
+           <div class="msg">
+            <p><i class="fa-regular fa-bell"></i></p>
+           </div>
+
+           <div class="logo">
+            <div class="image" id="imgId">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
+            </div>
+
+            <div class="dropDown" id="dropDownid">
+                <div class="Profile">
+                   <div> <img width="65px" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt=""></div>
+                    <div>
+                        <p>Hello,</p>
+                    <h4>CHUNKY SHARMA</h4>
+                    <p><u> View and edit profile</u></p>
+                    </div>
+                </div>
+                <hr>
+                <ul>
+                    <li>
+                        <i class="fa-regular fa-message"></i>
+                        <p>My ADS</p>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-clipboard"></i>
+                        <p>Buy Business Packages</p>
+                    </li>
+                    
+                <li>
+                    <i class="fa-solid fa-envelopes-bulk"></i>
+                    <p>Bought Packages & Billing</p>
+                </li>
+                <li>
+                    <hr>
+                    <i class="fa-regular fa-circle-question"></i>
+                    <p>Help</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <p>select Language </p>
+                </li>
+                <hr>
+                <li>
+                    <i class="fa-solid fa-sliders"></i>
+                    <p>Settings</p>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <p>Log Out</p>
+                </li>
+                <hr>
+                </ul>
+            </div>
+           </div>
+
+
+           <div class="sell">
+            <button>
+                <i class="fa-solid fa-plus"></i>
+                <p>SELL</p>
+            </button>
+        </div>
+
+
+
+        </div>
+    </div>
+     <!-- ===========Navbar============= -->
 </body>
 </html>
+<script src="insdex.js"></script>
