@@ -32,3 +32,11 @@ let arrow2=document.getElementById("arrow2")
         dropdown.classList.toggle("showProfile")
     })
 
+    // ================loadmore===============
+    let loadProduct=document.getElementById("loadMoreid")
+    let Bttn=document.getElementById("loadId")
+    Bttn.addEventListener("click",function showProducts(){
+
+        loadProduct.style="display:block"
+        Bttn.style="display:none"
+    })
