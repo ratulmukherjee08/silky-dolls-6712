@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: arial,Arial, Helvetica, sans-serif
+    
+}
+body{
+background-color: #f2f4f5;
+}
+.head{
+    background-color: #f7f8f9;
+    position: sticky;
+    box-shadow: 0 0 2px grey;
+    top:0%;
+    z-index: 5;
+}
+.navbar-cont{
+    display: flex;
+    align-items: center;
+    width:1300px;
+    margin: auto;
+}
+.navbar-cont>img{
+    width:70px;
+}
+.country-select{
+    width: 280px;
+    margin-left:50px ;
+}
+.select i{
+font-size: 15px;
+}
+.select{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    border: 2px solid rgb(78, 217, 217);
+}
+.option1{
+    display: flex;
+    padding: 10px;
+    width: 250px;
+    cursor: pointer;
+}
+.option1:hover{
+    background-color: #c7dcff;
+}
+.option p{
+    margin-left: 10px;
+    color: #444;
+}
+.option1 i{
+    color: #839a83;
+}
+.option{
+    box-shadow: 0 0 10px gray;
+    background-color: white;
+    display: none;
+    position: absolute;
+    top: 65px;
+}
+.showing{
+    display:block;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.search-box{
+    display: flex;
+    margin-left: 60px;
+}
+.search-box i{
+background-color: black;
+color: white;
+padding: 14px;
+font-size: 15px;
+border-radius: 0 6px 6px 0;
+cursor: pointer;
+}
+.search{
+    padding: 10px;
+    width: 400px;
+    font-size: 15px;
+    border: 2px solid black;
+}
+.language{
+    margin-left: 55px;
+}
+.eng{
+    cursor: pointer;
+    font-size: 18px;
+}
+.change{
+    background-color: white;
+    box-shadow: 0 0 10px grey;
+    width: 130px;
+    display: none;
+    position: absolute;
+    top: 65px;
+    margin-left: 55px;
+}
+.change li{
+    list-style: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.change li:hover{
+    background-color: #c7dcff;
+}
+.display{
+    display: block;
+}
+.rotate2{
+    transform: rotate(180deg);
+}
+.language{
+    display: flex;
+    cursor: pointer;
+}
+.msg i{
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.image img{
+    width:50px;
+    border-radius:50% ;
+    cursor: pointer;
+    margin-left: 65px;
+}
+.Profile{
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px 0;
+}
+.dropDown{
+    width: 350px;
+    box-shadow: 0 0 10px grey;
+    padding: 15px;
+    background-color: white;
+    display:none;
+    position: absolute;
+    top: 65px;
+}
+.dropDown ul li{
+    display: flex;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: black;
+    font-size:17px ;
+}
+.dropDown ul li:hover{
+    background-color: #c7dcff;
+}
+
+.dropDown ul{
+    margin-top: 20px;
+}
+.dropDown ul li p{
+   margin-left: 10px;
+   font-size: 17px;
+}
+.showProfile{
+    display: block;
+}
+.sell button{
+    border-style: solid;
+    border-width: 5px;
+    border-top-color: #23e5db;
+    border-left-color: #ffce32;
+    border-right-color: #3a77ff;
+    border-bottom-color: #3a77ff;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    display: flex;
+    margin-left: 55px;
+}
+/* <!-- ===========navbar============= --> */
+/* chatbox */
+.chatBox{
+    margin-top: 10px;
+    width:800px;
+    margin: 20px auto;
+   border:1px solid #d3d3d3;
+   position:sticky;
+}
+.head img{
+width:60px;
+margin-left: 15px;
+}
+.imgName{
+display: flex;
+align-items: center;
+}
+.imgName h2{
+    margin-left: 15px;
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #d3d3d3;
+    padding: 4px 0;
+}
+.head i{
+margin-right: 15px;
+color:black;
+cursor: pointer;
+transition: all 0.3s;
+}
+.head i:hover{
+    margin-right: 13px;
+    font-size: 20px;
+}
+.chat{
+    background-color: #ebeeef;
+    height:500px;
+    border:1px solid #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+#msg{
+    border-radius: 6px;
+    border:1px solid grey;
+    background-color: white;
+    margin:20px;
+    padding:8px 10px;
+    font-size: 15px;
+    display:none;
+}
+.sndMsg input{
+    width:100%;
+    padding: 15px 16px;
+    font-size:16px ;
+    border:none;
+    outline:none;
+}
+.sndMsg i{
+    color: white;
+    background-color: black;
+    padding: 12px;
+    font-size: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.sndMsg{
+    display:flex;
+    justify-content: space-between;
+}
+#demo{
+display:none;
+}
+    </style>
+</head>
+<body>
+     <!-- ===========Navbar============= -->
+    <div class="head">
+        <div class="navbar-cont">
+           <img  src="img2.png" alt="">
+           <div class="country-select" id="location">
+            <div class="select">
+                <p id="text">
+                    Search city,area or loc.... 
+                </p>
+                <i class="fa-solid fa-angle-down" id="arrow"></i>
+
+            </div>
+            <ul class="option" id="list">
+                <li class="option1" onclick="myFunction('Delhi')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Delhi</p>
+                </li>
+                <li class="option1" onclick="myFunction('Kerala')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Kerala</p>
+                </li>
+                <li class="option1" onclick="myFunction('Punjab')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Punjab</p>
+                </li>
+                <li class="option1" onclick="myFunction('Kolkata')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Kolkata</p>
+                </li>
+
+            </ul>
+           </div>
+
+           <div class="search-box">
+            <input type="text" class="search" placeholder="Find Cars,Mobile Phones and More.... " id="searchid">
+            <p><i class="fa-solid fa-magnifying-glass"></i></p>
+           </div>
+
+           <div class="language">
+            <p id="eng">ENGLISH</p>
+            <p><i class="fa-solid fa-angle-down" id="arrow2"></i></p>
+
+            <ul class="change">
+                <li onclick="changeLang('English')">English</li>
+                <li onclick="changeLang('हिन्दी')">हिन्दी</li>
+            </ul>
+
+           </div>
+           <div class="msg">
+            <p><i class="fa-regular fa-comment"></i></p>
+           </div>
+           <div class="msg">
+            <p><i class="fa-regular fa-bell"></i></p>
+           </div>
+
+           <div class="logo">
+            <div class="image" id="imgId">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
+            </div>
+
+            <div class="dropDown" id="dropDownid">
+                <div class="Profile">
+                   <div> <img width="65px" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt=""></div>
+                    <div>
+                        <p>Hello,</p>
+                    <h4>CHUNKY SHARMA</h4>
+                    <p><u> View and edit profile</u></p>
+                    </div>
+                </div>
+                <hr>
+                <ul>
+                    <li>
+                        <i class="fa-regular fa-message"></i>
+                        <p>My ADS</p>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-clipboard"></i>
+                        <p>Buy Business Packages</p>
+                    </li>
+                    
+                <li>
+                    <i class="fa-solid fa-envelopes-bulk"></i>
+                    <p>Bought Packages & Billing</p>
+                </li>
+                <li>
+                    <hr>
+                    <i class="fa-regular fa-circle-question"></i>
+                    <p>Help</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <p>select Language </p>
+                </li>
+                <hr>
+                <li>
+                    <i class="fa-solid fa-sliders"></i>
+                    <p>Settings</p>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <p>Log Out</p>
+                </li>
+                <hr>
+                </ul>
+            </div>
+           </div>
+
+
+           <div class="sell">
+            <button>
+                <i class="fa-solid fa-plus"></i>
+                <p>SELL</p>
+            </button>
+        </div>
+
+
+
+        </div>
+    </div>
+     <!-- ===========Navbar============= -->
+     <!-- ===========chat box============== -->
+     <div class="chatBox">
+        <div class="head">
+            <div class="imgName">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
+                <h2>CHUNKY SHARMA</h2>
+            </div>
+            <i class="fa-solid fa-x"></i>
+        </div>
+        <div class="chat">
+            <h3 id="msg"></h3>
+        </div>
+        <div class="sndMsg">
+            <input type="text" placeholder="Type a message" id="txtmsg">
+            <input type="text" placeholder="Type a message" id="demo">
+            <i class="fa-solid fa-paper-plane" id="item"></i>
+        </div>
+     </div>
+</body>
+</html>
+<script>
+     let locate=document.getElementById("location")
+let arrow=document.getElementById("arrow")
+let list=document.getElementById("list")
+let text=document.getElementById("text");
+locate.addEventListener("click",function (){
+    list.classList.toggle("showing")
+    arrow.classList.toggle("rotate")
+})
+function myFunction(output){
+    text.innerHTML=output
+}
+
+let eng=document.getElementById("eng")
+let Change = document.querySelector(".change")
+let lang=document.querySelector(".language")
+let arrow2=document.getElementById("arrow2")
+    lang.addEventListener("click",function change(){
+        Change.classList.toggle("display");
+        arrow2.classList.toggle("rotate2")
+    })
+    function changeLang(x){
+        eng.innerHTML=x
+    }
+
+    let image=document.getElementById("imgId")
+    let dropdown=document.getElementById("dropDownid")
+
+    image.addEventListener("click",()=>{
+        dropdown.classList.toggle("showProfile")
+    })
+    // chat box
+    let send=document.getElementById("item")
+    let msg=document.getElementById("msg")
+    let txt=document.getElementById("txtmsg")
+    let Demo=document.getElementById("demo")
+
+    send.addEventListener("click",function show(){
+        msg.innerHTML=txt.value;
+        msg.style="display:block"
+        txt.value=Demo.value;
+    })
+</script>

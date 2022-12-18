@@ -1,18 +1,21 @@
+/* <!-- ===========Navbar============= --> */
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
     font-family: arial,Arial, Helvetica, sans-serif
+    
 }
-
-/* <!-- ===========Navbar============= --> */
+body{
+background-color: #f2f4f5;
+}
 .head{
     background-color: #f7f8f9;
     position: sticky;
     box-shadow: 0 0 2px grey;
     top:0%;
+    z-index: 5;
 }
-
 .navbar-cont{
     display: flex;
     align-items: center;
@@ -40,7 +43,6 @@ font-size: 15px;
     justify-content: space-between;
     border: 2px solid rgb(78, 217, 217);
 }
-
 .option1{
     display: flex;
     padding: 10px;
@@ -94,9 +96,7 @@ cursor: pointer;
 .eng{
     cursor: pointer;
     font-size: 18px;
-   
 }
-
 .change{
     background-color: white;
     box-shadow: 0 0 10px grey;
@@ -142,8 +142,6 @@ cursor: pointer;
     align-items: center;
     margin: 10px 0 20px 0;
 }
-
-
 .dropDown{
     width: 350px;
     box-shadow: 0 0 10px grey;
@@ -191,156 +189,214 @@ cursor: pointer;
     display: flex;
     margin-left: 55px;
 }
-
-#cate{
+/* <!-- ===========navbar============= --> */
+/* <!-- ===========Product caarrisol============= --> */
+.productImg{
+    width: 1300px;
     display: flex;
-}
-.categories{
-    height: 50px;
-    display: flex;
-    align-items: center;
-    margin: 10px 0 0 25px;
-    background-color:0 0 10px grey;
-}
-.categories ul{
-    display: flex;
-    list-style: none;
-    cursor: pointer;
-
-}
-.categories ul li{
-    margin-left:25px;
-
-}
-.add{
     margin: auto;
-    width: 100%;
-    height: 175px;
+    margin-top: 10px;
 }
-.add img{
-    width:100%;
-    height: 100%;
-    cursor: pointer;
+.imageDescrip{
+    width: 1300px;
+    display: flex;
+    margin: auto;
+    background-color: black;
 }
-/* <!-- ===========products page========== --> */
-.product>h1{
-    margin-top:20px ;
-    font-weight: lighter;
-    text-decoration: none;
+.imageDescrip>.swiper img{
+    width:600px;
+    margin-left:300px;
+    margin-top: 10px;
+    height: 500px;
 }
-
-
-.fstRow{
+#prev{
+    color: white;
+}
+#next{
+    color: white;
+}
+/* <!-- ===========Product caarrisol============= --> */
+/* <!-- ===========Product info============= --> */
+.productInfo{
     display:flex;
-    justify-content: space-evenly;
     width: 1200px;
+    height: 200px;
     margin: auto;
-    margin-top:45px ;
+    margin-top: 10px;
+    padding-top: 20px;
+    justify-content: space-between;
+   
 }
-.img{
-    width: 80%;
-    height:140px;
-    margin: auto;
+.name{
+    width: 800px;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.box>.img img{
-width: 100%;
-height:100%;
-overflow: hidden;
+.name h1{
+    padding:20px 0 20px 20px;
 }
-
-.box{
-    border:1px solid rgb(197, 196, 196);
-    width:260px;
-    height: 230px;
-    cursor: pointer;
+.name p{
+    padding:10px 0 10px 20px;
 }
-.box:hover{
-    border: 2px solid rgb(140,140,139);
-
-}
-.box a{
-    text-decoration: none;
-    color:black;
-}
-.box h2{
-    padding: 5px 0 0 20px;
-}
-
-.box p{
-    padding: 0 0 10px 10px;
-    color:#6f8a94;
-    font-size: 14px;
-}
-.address{
-display :flex;
-align-items: flex-end;
-justify-content: space-between;
-}
-.address p{
-    font-size: 10px;
-    margin-right: 10px;
-}
-/* ==================loadmore============== */
-.loadmore button{
-    height: 50px;
-    width: 100px;
-    margin: 50px auto;
-    padding: 8px 6px;
-    background-color: white;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    display: block;
-    color: rgb(37, 36, 36);
-    font-weight: bold;
-    transition:all 0.2s;
-    border: 2px solid black;
-}
-.loadmore button:hover{
-    border:4px solid black ;
-}
-#loadMoreid{
-    display: none;
-}
-.downloadApp{
-    background-color: #f7f8f9;
-}
-.download{
-    margin: 100px 0 0;
+.name ul li{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    
 }
-.images{
-    width: 400px;
+.name ul{
+   display: flex;
 }
-.text{
-    border-right: 2px solid #cacdce;
+.name ul li p{
+    color:rgb(161, 154, 154);
+    padding-left: 5px;
+    margin-left: 5px;
 }
-.text h1{
-    padding: 20px 20px 10px 20px ;
+.name ul li i{
+    color:rgb(161, 154, 154);
+    padding-top: 10px;
+    margin-left: 8px;
+}
+.price{
+    width:400px;
+    height: 100%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.price h1{
+    padding: 30px 0 0 70px;
+    font-size: 50px;
+}
+.price button{
+    width:250px;
+    height:70px;
+    margin-left: 70px;
+    border-radius: 8px;
+    border:0px;
+    background-color: rgb(33, 31, 31);
+    font-size: 25px;
+    color: white;
+    font-weight: bolder;
+}
+.ovrvewMain{
+    display:flex;
+    width: 1200px;
+    height: 150px;
+    margin: auto;
+    margin-top: 10px;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+.ovrvew{
+    width:800px;
+    height: 150px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.ovrvew h2{
+    color:rgb(161, 154, 154);
+    padding: 10px 0 0 10px;
     font-size: 35px;
 }
-text p{
-    padding: 10px 20px 20px 20px;
-    font-size: 20px;
+.ovrvew ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.download_app p{
-padding: 20px 20px 20px 0;
+.ovrvew ul{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
 }
-.download_app{
-    padding-left: 30px;
+.ovrvew ul li i{
+    padding-left: 10px;
 }
-.Mainfooter{
-    background-color: #ebeeef;
-    box-shadow: 0 0 2px grey;
+.ovrvew ul li div p{
+padding-bottom: 10px;
+}
+.descriptionMain{
+    display:flex;
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+    margin-top: 10px;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+.description{
+    width:800px;
+    height:100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.description h1{
+    padding-left: 25px;
+    padding-bottom: 20px;
+    color: rgb(157, 150, 150);
+    font-size: 35px;
+}
+.description ul li{
+    list-style: none;
+    padding-left: 20px;
+    color:rgb(143, 136, 136);
+    margin-top: 10px;
+}
+.sold{
+    width:400px;
+    height: 100%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align:justify;
+}
+.sold p{
+    color:rgb(157, 150, 150);
+    padding-left: 15px;
+    padding-top: 10px;
+
+}
+.sold h2{
+    padding-left: 15px;
+    padding-top: 10px;
+
+}
+.sold h4{
+    padding-left: 15px;
     padding-top: 10px;
 }
+.sold button{
+    width:380px;
+    height:50px;
+    background-color: white;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+}
+.sold ul li{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.sold>.Loc{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width:90%;
+}
+.Loc i{
+    margin-left: 20px;
+    font-size: 25px;
+     margin-top: 20px;
+}
+.sold p{
+    margin-top:25px;
+    text-align: center;
+}
+
+/* =============footer================ */
 .footer{
     display:flex;
     align-items: center;
     justify-content: space-between;
-    width: 1200px;
+    width: 1300px;
     margin: auto;
 }
 .footerBox h2{
@@ -363,7 +419,4 @@ padding: 20px 20px 20px 0;
 }
 .footerBox button{
     border: 0px;
-}
-#log{
-    cursor: pointer;
 }

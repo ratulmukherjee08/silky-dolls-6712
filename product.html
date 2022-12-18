@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+    <!-- ===========Navbar============= -->
+    <div class="head">
+        <div class="navbar-cont">
+           <img src="img2.png" alt="">
+           <div class="country-select" id="location">
+            <div class="select">
+                <p id="text">
+                    Search city,area or loc.... 
+                </p>
+                <i class="fa-solid fa-angle-down" id="arrow"></i>
+
+            </div>
+            <ul class="option" id="list">
+                <li class="option1" onclick="myFunction('Delhi')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Delhi</p>
+                </li>
+                <li class="option1" onclick="myFunction('Kerala')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Kerala</p>
+                </li>
+                <li class="option1" onclick="myFunction('Punjab')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Punjab</p>
+                </li>
+                <li class="option1" onclick="myFunction('Kolkata')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Kolkata</p>
+                </li>
+
+            </ul>
+           </div>
+
+           <div class="search-box">
+            <input type="text" class="search" placeholder="Find Cars,Mobile Phones and More.... " id="searchid">
+            <p><i class="fa-solid fa-magnifying-glass"></i></p>
+           </div>
+
+           <div class="language">
+            <p id="eng">ENGLISH</p>
+            <p><i class="fa-solid fa-angle-down" id="arrow2"></i></p>
+
+            <ul class="change">
+                <li onclick="changeLang('English')">English</li>
+                <li onclick="changeLang('हिन्दी')">हिन्दी</li>
+            </ul>
+
+           </div>
+           <div class="msg">
+            <p><i class="fa-regular fa-comment"></i></p>
+           </div>
+           <div class="msg">
+            <p><i class="fa-regular fa-bell"></i></p>
+           </div>
+
+           <div class="logo">
+            <div class="image" id="imgId">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
+            </div>
+
+            <div class="dropDown" id="dropDownid">
+                <div class="Profile">
+                   <div> <img width="65px" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt=""></div>
+                    <div>
+                        <p>Hello,</p>
+                    <h4>CHUNKY SHARMA</h4>
+                    <p><u> View and edit profile</u></p>
+                    </div>
+                </div>
+                <hr>
+                <ul>
+                    <li>
+                        <i class="fa-regular fa-message"></i>
+                        <p>My ADS</p>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-clipboard"></i>
+                        <p>Buy Business Packages</p>
+                    </li>
+                    
+                <li>
+                    <i class="fa-solid fa-envelopes-bulk"></i>
+                    <p>Bought Packages & Billing</p>
+                </li>
+                <li>
+                    <hr>
+                    <i class="fa-regular fa-circle-question"></i>
+                    <p>Help</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <p>select Language </p>
+                </li>
+                <hr>
+                <li>
+                    <i class="fa-solid fa-sliders"></i>
+                    <p>Settings</p>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <p>Log Out</p>
+                </li>
+                <hr>
+                </ul>
+            </div>
+           </div>
+
+
+           <div class="sell">
+            <button>
+                <i class="fa-solid fa-plus"></i>
+                <p>SELL</p>
+            </button>
+        </div>
+
+
+
+        </div>
+    </div>
+     <!-- ===========Navbar============= -->
+
+      <!-- ===========Product caarrisol============= -->
+      <div class="productImg">
+        <div class="imageDescrip">
+            
+<div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="https://apollo-singapore.akamaized.net/v1/files/dl8sqon35c292-IN/image;s=780x0;q=60"></div>
+      <div class="swiper-slide"><img src="https://apollo-singapore.akamaized.net/v1/files/koou6lhdnwrt3-IN/image;s=780x0;q=60"></div>
+      <div class="swiper-slide"><img src="https://apollo-singapore.akamaized.net/v1/files/vs6fp50a0xrp1-IN/image;s=943x0;q=60"></div>
+      <div class="swiper-slide"><img src="https://apollo-singapore.akamaized.net/v1/files/3ikfoevmslcj1-IN/image;s=943x0;q=60"></div>
+      <div class="swiper-slide"><img src="https://apollo-singapore.akamaized.net/v1/files/mf7trf2ergbg2-IN/image;s=943x0;q=60"></div>
+      <div class="swiper-slide"><img src="https://apollo-singapore.akamaized.net/v1/files/mrnpq7adnzsv-IN/image;s=943x0;q=60"></div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+  
+    <div class="swiper-button-prev" id="prev"></div>
+    <div class="swiper-button-next" id="next"></div>
+  </div>
+        </div>
+      </div>
+      <div class="productInfo">
+        <div class="name">
+            <h1>Mahindra Xuv500 (2015)</h1>
+            <p>W10 2WD</p>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-gas-pump"></i>
+                    <p>DISEL</p>
+                </li>
+                <hr>
+                <li>
+                    <i class="fa-solid fa-gauge-simple-high"></i>
+                    <p>77,973 KM
+                    </p>
+                </li>
+                <hr>
+                <li>
+                    <i class="fa-solid fa-address-book"></i>
+                    <p>MANUAL</p>
+                </li>
+            </ul>
+        </div>
+        <div class="price">
+            <h1>₹ 8,30,000</h1>
+            <button>Make Offer</button>
+        </div>
+      </div>
+      <div class="ovrvewMain">
+        <div class="ovrvew">
+            <h2>Overview</h2>
+            <hr>
+            <ul>
+                <li>
+                    <i class="fa-regular fa-user"></i>
+                    <div>
+                <p style="color:rgb(144, 135, 135)">Owner</p>
+                <h4>1st</h4>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                <p style="color:rgb(144, 135, 135)">Location</p>
+                <h4>Paschim Vihar, Delhi</h4>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-regular fa-calendar"></i>
+                    <div>
+                <p style="color:rgb(144, 135, 135)">Posting date</p>
+                <h4>17-DEC-22</h4>
+                    </div>
+                </li>
+            </ul>
+          </div>
+          <div>   
+          </div>
+      </div>
+      <div class="descriptionMain">
+        <div class="description">
+            <h1>Description</h1>
+            <hr>
+            <ul>
+                <li>SCORPIO SL6+ 2017</li>
+                <li>DIESEL</li>
+                <li>51000KM DRIVEN WITH COMPANY RECORDS</li>
+                <li>ALL SERVICES DONE FROM MAHINDRA</li>
+                <li>WELL MAINTAINED CAR</li>
+                <li>NON ACCIDENTAL CAR</li>
+                <li>TOTAL ORIGINAL PAINT CAR</li>
+                <li>ADDITIONAL VEHICLE INFORMATION:</li>
+                <li>Accidental: No</li>
+                <li>Battery Condition: New</li>
+                <li>Vehicle Certified: Yes</li>
+                <li>Color: Red</li>
+                <li>Lock System: Remote Controlled Central</li>
+                <li>Make Month: February</li>
+                <li>Registration Place: DL</li>
+                <li>Service History: Available</li>
+                <li>Tyre Condition: Old</li>
+            </ul>
+        </div>
+        <div class="sold">
+            <p>SOLD BY</p>
+            <h2>Fox Enterprises</h2>
+            <h4>Verified Seller</h4>
+            <p>Posted On : 12/18/2022</p>
+            <a href="/clonePro/silky-dolls-6712/chat.html"><button style="color:black"> 
+                Chat With Seller</button>
+            </a>
+            <ul>
+                <li>
+                    <i style="margin-top:25px" class="fa-solid fa-phone"></i>
+                    <p>** **********</p>
+                    <p style="color:blue;font-size:13px"><u>Show Number</u></p>
+                </li>
+            </ul>
+            <div  class="Loc">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Paschim Vihar, Delhi, Delhi</p>
+                <img width="100px" src="https://maps.googleapis.com/maps/api/staticmap?center=28.5678997%2C77.20950317&size=640x410&language=en-IN&zoom=15&scale=1&lang=en-IN&channel=olx-latam-ar-web-dev&key=AIzaSyAChxbDof4fywIkC6U-7MCgXBpUp4t2DiA&signature=49y-EwDJo4WFIa7XmRfc0uPdxMY=" alt="">
+            </div>
+            <p style="text-align:center;"><u>View Profile</u></p>
+            <p><b>AD ID 1709355222
+                REPORT THIS AD</b></p>
+        </div>
+      </div>
+      
+       <!-- ===========Product caarrisol============= -->
+       <!-- !-- =======================footer======================= --> -->
+       <div class="Mainfooter">
+           <div class="footer">
+              <div class="footerBox">
+                  <h4> POPULAR LOCATIONS</h4>
+                  <p>Kolkata</p>
+                  <p>Mumbai</p>
+                  <p>Chennai</p>
+                  <p>Pune</p>
+              </div>.
+              <div class="footerBox">
+                  <h4> TRENDING LOCATIONS</h4>
+                  <p> Bhubaneshwar</p>
+                  <p> Hyderabad</p>
+                  <p>Chandigarh</p>
+                  <p>Nashik</p>
+              </div>.
+              <div class="footerBox">
+                  <h4> About Apna Market Group</h4>
+                  <p>careers</p>
+                  <p> Contact Us</p>
+                  <p> Apna Market People</p>
+                  <p> Waah Jobs</p>
+              </div>.
+              <div class="footerBox">
+                  <h4> Apna Market</h4>
+                  <p> Help</p>
+                  <p>Sitemap</p>
+                  <p>Legal & Privacy information</p>
+                  <p>Blog</p>
+              </div>.
+              <div class="footerBox">
+                  <p>Follow Us</p>
+                  <div class="icons">
+                      <i class="fa-brands fa-facebook-f"></i>
+                      <i class="fa-brands fa-instagram"></i>
+                      <i class="fa-brands fa-twitter"></i>
+                      <i class="fa-regular fa-circle-play"></i>
+                  </div>
+                  <button><img src="https://statics.olx.in/external/base/img/appstore.webp" alt=""></button>
+                  <button><a href="https://play.google.com/store/apps/details?id=com.olx.southasia"></button>
+              </div>
+           </div>
+       </div>
+
+</body>
+</html>
+<script>
+    let locate=document.getElementById("location")
+let arrow=document.getElementById("arrow")
+let list=document.getElementById("list")
+let text=document.getElementById("text");
+locate.addEventListener("click",function (){
+    list.classList.toggle("showing")
+    arrow.classList.toggle("rotate")
+})
+function myFunction(output){
+    text.innerHTML=output
+}
+
+let eng=document.getElementById("eng")
+let Change = document.querySelector(".change")
+let lang=document.querySelector(".language")
+let arrow2=document.getElementById("arrow2")
+    lang.addEventListener("click",function change(){
+        Change.classList.toggle("display");
+        arrow2.classList.toggle("rotate2")
+    })
+    function changeLang(x){
+        eng.innerHTML=x
+    }
+
+    let image=document.getElementById("imgId")
+    let dropdown=document.getElementById("dropDownid")
+
+    image.addEventListener("click",()=>{
+        dropdown.classList.toggle("showProfile")
+    })
+    // ==================product=========================
+    const swiper = new Swiper('.swiper', {
+
+        loop: true,
+
+
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>>
