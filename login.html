@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<style>
+    body{
+        background-color: rgb(170, 156, 156);
+    }
+   .loginPage{
+    border-radius: 4px;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    box-shadow: rgba(65, 65, 150, 0.25) 0px 30px 60px -12px inset, rgba(78, 75, 75, 0.3) 0px 18px 36px -18px inset;
+    margin-top: 200px;
+   }
+   #signup h2{
+    font-size: 35px;
+   }
+   #signup input{
+    width:200px;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+   }
+   #signin h2{
+    font-size: 35px;
+   }
+   #signin input{
+    width:200px;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border: none;
+    cursor: pointer;
+   }
+   #signin input:hover{
+    border: 2px solid white ;
+   }
+   #signup input:hover{
+    border: 2px solid white ;
+   }
+
+button{
+    width: 300px;
+    display: flex;
+    margin: auto;
+    height: 40px;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(118, 113, 113);
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+button:hover{
+    border: 2px solid white ;
+}
+</style>
+<body>
+    <div class="loginPage">
+        <form id="signup">
+            <h2><i style="font-size:25px" class="fa-solid fa-user-plus"></i>
+                 Sign Up Here</h2>
+            <input type="text" id="name" placeholder="Name" required>
+            <br>
+            <input type="email" id="email" placeholder="E-Mail" required>
+            <br>
+            <input type="password" id="password" placeholder="Password" required>
+            <br>
+            <input type="password" id="Chkpassword" placeholder="Re-Enter Password" required>
+            <br>
+            <input type="submit" required>
+        </form>
+        <form id="signin">
+            <h2>
+                <i style="font-size:25px" class="fa-solid fa-user-plus"></i>Sign In Here</h2>
+            <input type="email" id="email1" placeholder="E-Mail" required>
+            <br>
+            <input type="password" id="password1" placeholder="Password" required>
+            <br>
+            <input type="submit" required>
+        </form>
+        
+    </div>
+         <button id="child1">Sign Up</button>
+        <button id="child2">Sign In</button>
+</body>
+</html>
+<script>
+    let signin=document.querySelector("#child2")
+    let signup=document.querySelector("#child1")
+    let signIn=document.querySelector("#signin")
+    let signUp=document.querySelector("#signup")
+
+
+    signIn.style.display="none"
+    signin.addEventListener("click",function(){
+        signUp.style.display="none"
+        signIn.style.display="block"
+    })
+    signup.addEventListener("click",function(){
+        signIn.style.display="none"
+        signUp.style.display="block"
+    })
+
+
+    signUp.addEventListener("submit",function(event){
+        event.preventDefault();
+        let name=signUp.name.value;
+        let username=signUp.email.value;
+        let psw=signUp.password.value;
+        if(psw!==signUp.Chkpassword.value){
+            alert("Password do not match!")
+        }
+        else{
+            localStorage.setItem("name",name)
+            localStorage.setItem("username",username)
+            localStorage.setItem("psw",psw)
+            signUp.reset();
+            alert("Sign Up Successful")
+        }
+
+    })
+    signIn.addEventListener("submit",function(event){
+        event.preventDefault();
+        let username=signIn.email1.value;
+        let psw=signIn.password1.value;
+        // console.log(username,psw)
+
+        let userstore= localStorage.getItem("username");
+        let pswstore= localStorage.getItem("psw")
+
+        if (username!==userstore){
+            alert("You are not Registered with us")
+        }
+        else{
+            if(psw===pswstore){
+                window.location.assign("http://127.0.0.1:5500/clonePro/silky-dolls-6712/index.html")
+            }else{
+                alert("Wrong Password")
+            }
+        }
+    })
+</script>
